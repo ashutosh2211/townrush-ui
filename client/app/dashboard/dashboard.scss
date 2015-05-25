@@ -1,0 +1,31 @@
+.shipment_table{
+	tr{
+		td{
+			text-align:center
+		}
+		//delivered successfuly
+		.delivered{
+			color:green
+		}
+		//ready to ship
+		.rts{
+			color:yellow
+		}
+		//out for delivery
+		.ofd{
+			color:blue
+		}
+		//return to origin
+		.rto{
+			color:blue
+		}
+		//returned to merchant
+		.returned{
+			color:blue
+		}
+		//merchant cancellation
+		.mercan{
+			color:red
+		}
+	}
+};

@@ -1,0 +1,52 @@
+<div ng-include="'components/navbarmain/navbarmain.html'"></div>
+
+<div class="col-md-12">
+	
+
+	<div ng-show="!shipments_fetched">
+		<h4 style="text-align:center">Fetching Shipments&nbsp;&nbsp;<i class="fa fa-refresh fa-spin"></i></h4>
+	</div>
+	<div ng-show="shipments_fetched">
+		<h3 style="font-weight:bold;margin-top:0px">{{entity_name}}</h3>
+	</div>
+
+	<div ng-show="shipments_fetched">
+		<table ng-table class="table table-striped shipment_table">
+			<tr ng-repeat="shipment in shipments">
+				<td data-title="'Shipment_Id'">
+					{{shipment.shipment_id}}
+				</td>
+
+				<td data-title="'Worker_Name'" style="text-align:center">
+					{{shipment.assigned_worker_name}}
+				</td>
+				<td data-title="'Collectible_Amount'">
+					<i class="fa fa-inr">&nbsp;</i>{{shipment.collectible_amount}}
+				</td>
+				<td data-title="'Created_At'">
+					{{shipment.created_at}}
+				</td>
+				<td data-title="'Deadline'">
+					{{shipment.deadline}}
+				</td>
+				<td data-title="'Delivery_Type'">
+					{{shipment.delivery_type}}
+				</td>
+
+				<td data-title="'Status'" class="delivered">
+					<i class="fa fa-check-square"></i>
+					{{shipment.status}}
+				</td>	
+				<td data-title="'Tracking_Id'">
+					{{shipment.tracking_id}}
+				</td>
+
+
+
+
+
+			</tr>
+		</table>
+	</div>
+
+</div>
